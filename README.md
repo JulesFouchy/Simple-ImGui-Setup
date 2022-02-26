@@ -6,6 +6,12 @@ It is meant for you to copy-paste and use as a starting point for your own proje
 
 It uses *glfw* and *OpenGL3* as the backends for *Dear Imgui*.
 
+## Cloning
+
+```
+git clone --recursive https://github.com/JulesFouchy/Simple-ImGui-Setup
+```
+
 ## Compiling
 
 You need to install [CMake](https://cmake.org/download/).

@@ -5,6 +5,8 @@
 
 #include "ImGuiWrapper.h"
 
+/// This is an example of how you would create windows and widgets with ImGui.
+/// Replace it with your own code!
 void example_imgui_windows()
 {
     static bool show_demo_window    = true;

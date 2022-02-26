@@ -27,3 +27,22 @@ target_link_libraries(${PROJECT_NAME} PRIVATE glfw)
 add_library(glad lib/glad/src/glad.c)
 target_include_directories(glad PUBLIC lib/glad/include)
 target_link_libraries(${PROJECT_NAME} PRIVATE glad)
+# ---Add Dear ImGui---
+add_library(ImGui)
+target_sources(ImGui PRIVATE
+    lib/imgui/imgui_demo.cpp
+    lib/imgui/imgui_draw.cpp
+    lib/imgui/imgui_tables.cpp
+    lib/imgui/imgui_widgets.cpp
+    lib/imgui/imgui.cpp
+    lib/imgui/misc/cpp/imgui_stdlib.cpp
+)
+target_include_directories(ImGui PRIVATE lib/imgui)
+# Build ImGui with glfw
+target_link_libraries(ImGui PRIVATE glfw)
+target_sources(ImGui PRIVATE lib/imgui/backends/imgui_impl_glfw.cpp)
+# Build ImGui with OpenGL
+target_sources(ImGui PRIVATE lib/imgui/backends/imgui_impl_opengl3.cpp)
+# "Link" the library
+target_link_libraries(${PROJECT_NAME} PRIVATE ImGui)
+target_include_directories(${PROJECT_NAME} PRIVATE lib)

@@ -47,7 +47,7 @@ void example_imgui_windows()
 
 int main(int, char**)
 {
-    GLFWwindow* const window = create_window(1280, 720, "Simple ImGui Setup");
+    GLFWwindow* const window = ImGuiWrapper::create_window(1280, 720, "Simple ImGui Setup");
 
     // Main loop
     while (!glfwWindowShouldClose(window)) {
@@ -58,10 +58,10 @@ int main(int, char**)
         // Generally you may always pass all inputs to dear imgui, and hide them from your application based on those two flags.
         glfwPollEvents();
 
-        start_imgui_frame();
+        ImGuiWrapper::start_imgui_frame();
         example_imgui_windows();
-        end_imgui_frame(window, {0.45f, 0.55f, 0.60f, 1.00f});
+        ImGuiWrapper::end_imgui_frame(window, {0.45f, 0.55f, 0.60f, 1.00f});
     }
 
-    shutdown(window);
+    ImGuiWrapper::shutdown(window);
 }

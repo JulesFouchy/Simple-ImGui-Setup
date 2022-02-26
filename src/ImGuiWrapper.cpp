@@ -4,6 +4,8 @@
 #include <imgui/backends/imgui_impl_opengl3.h>
 #include <iostream>
 
+namespace ImGuiWrapper {
+
 static void glfw_error_callback(int error, const char* description)
 {
     std::cerr << "[Glfw Error] " << error << ": " << description << "\n";
@@ -115,3 +117,5 @@ void shutdown(GLFWwindow* window)
     glfwDestroyWindow(window);
     glfwTerminate();
 }
+
+} // namespace ImGuiWrapper

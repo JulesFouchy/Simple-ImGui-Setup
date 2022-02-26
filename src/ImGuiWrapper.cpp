@@ -77,7 +77,7 @@ GLFWwindow* create_window(int width, int height, const char* title)
     return window;
 }
 
-void start_imgui_frame()
+void start_frame()
 {
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
@@ -101,7 +101,7 @@ void start_imgui_frame()
     }
 }
 
-void end_imgui_frame(GLFWwindow* window, ImVec4 background_color)
+void end_frame(GLFWwindow* window, ImVec4 background_color)
 {
     // Rendering
     ImGui::Render();

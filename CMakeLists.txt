@@ -37,7 +37,7 @@ target_sources(ImGui PRIVATE
     lib/imgui/imgui.cpp
     lib/imgui/misc/cpp/imgui_stdlib.cpp
 )
-target_include_directories(ImGui PRIVATE lib/imgui)
+target_include_directories(ImGui PUBLIC lib/imgui)
 # Build ImGui with glfw
 target_link_libraries(ImGui PRIVATE glfw)
 target_sources(ImGui PRIVATE lib/imgui/backends/imgui_impl_glfw.cpp)

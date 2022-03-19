@@ -59,7 +59,7 @@ int main(int, char**)
         // - When io.WantCaptureKeyboard is true, do not dispatch keyboard input data to your main application.
         glfwPollEvents();
 
-        ImGuiWrapper::start_frame();
+        ImGuiWrapper::begin_frame();
         example_imgui_windows();
         ImGuiWrapper::end_frame(window, {0.45f, 0.55f, 0.60f, 1.00f});
     }

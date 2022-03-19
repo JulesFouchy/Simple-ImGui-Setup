@@ -77,7 +77,7 @@ GLFWwindow* create_window(int width, int height, const char* title)
     return window;
 }
 
-void start_frame()
+void begin_frame()
 {
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
